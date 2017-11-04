@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Protocols'/>
+        <page name='PropertyRequirements'/>
+        <page name='MethodRequirements'/>
+        <page name='InitializerRequirements'/>
+        <page name='ProtocolsAsType'/>
+        <page name='Inheritance'/>
+        <page name='ClassOnlyProtocols'/>
+        <page name='ProtocolComposition'/>
+        <page name='CheckingForProtocolConformance'/>
+        <page name='ProtocolsExtensions'/>
+    </pages>
+</playground>
