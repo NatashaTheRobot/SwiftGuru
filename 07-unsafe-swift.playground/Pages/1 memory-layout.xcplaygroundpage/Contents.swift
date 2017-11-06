@@ -1,5 +1,10 @@
-//: Playground - noun: a place where people can play
+/*:
+ ## Session 7: Unsafe Swift
+ ### 7.1 Memory Layout
+ - Be able to
+ */
 
+//1. Types
 MemoryLayout<Int>.size          // returns 8 (on 64-bit)
 MemoryLayout<Int>.alignment     // returns 8 (on 64-bit)
 MemoryLayout<Int>.stride        // returns 8 (on 64-bit)
@@ -16,8 +21,7 @@ MemoryLayout<Double>.size       // returns 8
 MemoryLayout<Double>.alignment  // returns 8
 MemoryLayout<Double>.stride     // returns 8
 
-//Struct Memory Layout
-
+//2. Structs
 struct EmptyStruct {}
 
 MemoryLayout<EmptyStruct>.size      // returns 0
@@ -33,8 +37,7 @@ MemoryLayout<SampleStruct>.size       // returns 5
 MemoryLayout<SampleStruct>.alignment  // returns 4
 MemoryLayout<SampleStruct>.stride     // returns 8
 
-//Class Memory Layout
-
+//3. Classes
 class EmptyClass {}
 
 MemoryLayout<EmptyClass>.size      // returns 8 (on 64-bit)

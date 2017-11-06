@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:01-functional-programming.playground">
+      location = "group:/Users/rahulkatariya/Developer/NatashaTheRobot/SwiftGuru/01-functional-swift.playground">
    </FileRef>
    <FileRef
       location = "group:/Users/rahulkatariya/Developer/NatashaTheRobot/SwiftGuru/02-custom-operators.playground">
@@ -17,7 +17,7 @@
       location = "group:05-value-references-cow.playground">
    </FileRef>
    <FileRef
-      location = "group:06-error-handling.playground">
+      location = "group:/Users/rahulkatariya/Developer/NatashaTheRobot/SwiftGuru/06-enums-error-handling.playground">
    </FileRef>
    <FileRef
       location = "group:07-unsafe-swift.playground">

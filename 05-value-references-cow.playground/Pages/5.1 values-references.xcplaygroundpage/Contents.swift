@@ -1,6 +1,6 @@
 /*:
- ## Session 4: Value & References and Copy On Write
- ### 4.1 Value & References
+ ## Session 5: Value & References and Copy On Write
+ ### 5.1 Value & References
  - Be able to
  */
 

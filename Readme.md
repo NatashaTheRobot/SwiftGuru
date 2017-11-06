@@ -4,7 +4,12 @@
 <br>
 <br>
 
-## Session 1: Functional Programming
+## Session 1: Functional Swift
+### 1.1 First-class functions
+### 1.2 Closures
+### 1.3 Immutability and Pure Functions
+### 1.4 Higher-order Functions
+### 1.5 Recursion
 
 <br>
 <br>
@@ -24,17 +29,20 @@
 <br>
 <br>
 
-## Session 5: Value, References And Copy On Write
+## Session 5: Value, References, Indirection And Copy On Write
 
 <br>
 <br>
 
-## Session 6: Error Handling
+## Session 6: Enums & Error Handling
 
 <br>
 <br>
 
-## Session 7: Memory Management
+## Session 7: Memory and Unsafe Swift
+### 7.1 Memory Layout
+### 7.2 Raw Pointers
+### 7.3 Typed Pointers
 
 <br>
 <br>

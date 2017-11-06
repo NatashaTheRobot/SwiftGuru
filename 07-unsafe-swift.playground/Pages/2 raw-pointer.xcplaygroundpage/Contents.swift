@@ -1,4 +1,8 @@
-//: [Previous](@previous)
+/*:
+ ## Session 7: Unsafe Swift
+ ### 7.2 Raw Pointers
+ - Be able to
+ */
 
 let count = 2
 let stride = MemoryLayout<Int>.stride
@@ -22,5 +26,3 @@ let bufferPointer = UnsafeRawBufferPointer(start: pointer, count: byteCount)
 for (offset, byte) in bufferPointer.enumerated() {
     print("byte \(offset): \(byte)")
 }
-
-//: [Next](@next)

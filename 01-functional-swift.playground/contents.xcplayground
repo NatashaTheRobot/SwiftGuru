@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='1-first-class-functions'/>
+        <page name='2-closures'/>
+        <page name='3-immutability-pure-functions'/>
+        <page name='4-higher-order-functions'/>
+        <page name='5-recursion'/>
+    </pages>
+</playground>
