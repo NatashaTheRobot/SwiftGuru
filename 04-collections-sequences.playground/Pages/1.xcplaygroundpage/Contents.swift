@@ -45,7 +45,7 @@ struct Matrix2D {
 }
 
 /*:
- ##### Iterating through the rows of the matrix
+ ##### Sequence: iterating through the rows of the matrix
  As a part of our deep learning package we want to have the ability to iterate through the matrix, one row at a time! How do we implement this functionality without actually looping through the array? The `Sequence` protocol is one possible way.
  Once our type is a Sequence, we can use the `for-in` construct and also it's functional counterpart `forEach`. All we need is to make our type conform to Sequence and create an iterator that conforms to IteratorProtocol.
 
@@ -104,3 +104,43 @@ print(m)
 matrix.filter { row in row.reduce(0, +) % 10 == 0 }
     .forEach { print($0) }
 //Exercise ends
+
+/*:
+ ##### Collection: making Matrix2D row indexable
+* matrix.first must return the first row
+* matrix[2] must return the second row
+* matrix[2...4] must return rows 2, 3 and 4
+
+ Refer to https://developer.apple.com/documentation/swift/collection
+ */
+extension Matrix2D: Collection {
+
+    var startIndex: Int {
+        return 0
+    }
+
+    var endIndex: Int {
+        return rows
+    }
+
+    func index(after idx: Int) -> Int {
+        return idx + 1
+    }
+
+    subscript(position: Int) -> [Int] {
+        return Array(elements[position*columns..<(position+1)*columns])
+    }
+}
+/*:
+ > Print the first row of the matrix
+ */
+print(matrix.first!)
+
+/*:
+ > Print the third row of the matrix
+ */
+print(matrix[2])
+/*:
+ > Print rows 2, 3 and 4 of the matrix
+ */
+matrix[2...4].forEach { print($0) }
