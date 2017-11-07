@@ -113,7 +113,7 @@ matrix.filter { row in row.reduce(0, +) % 10 == 0 }
 
  Refer to https://developer.apple.com/documentation/swift/collection
  */
-extension Matrix2D: Collection {
+extension Matrix2D: MutableCollection /*Collection first, then mutable*/ {
 
     var startIndex: Int {
         return 0
@@ -128,7 +128,14 @@ extension Matrix2D: Collection {
     }
 
     subscript(position: Int) -> [Int] {
-        return Array(elements[position*columns..<(position+1)*columns])
+        get {
+            return Array(elements[position*columns..<(position+1)*columns])
+        }
+        set(newValue) {
+            for i in 0..<newValue.count {
+                self.elements[position * columns + i] = newValue[i]
+            }
+        }
     }
 }
 /*:
@@ -144,3 +151,36 @@ print(matrix[2])
  > Print rows 2, 3 and 4 of the matrix
  */
 matrix[2...4].forEach { print($0) }
+
+/*:
+ ##### BidirectionalCollection: support backward traversal
+ * Find the last row of a matrix
+ * Return the last 4 rows of the matrix
+ */
+//Exercise begins
+extension Matrix2D: BidirectionalCollection {
+    func index(before idx: Int) -> Int {
+        return idx - 1
+    }
+}
+//Exercise ends
+
+//: > Print the last row of a matrix
+print(matrix.last!)
+
+//: > Remove the last two rows of a given matrix
+matrix.suffix(4).forEach { print($0) }
+
+
+/*:
+ ##### MutableCollection: modifying the elements of a collection
+ * Swapping the rows at two given indices
+ * Sorting the collection in place
+ */
+
+//>: Swapping rows 0 and 2
+matrix.swapAt(0, 2)
+matrix.forEach { print($0) }
+
+//>: Sort the rows by the first element
+matrix.sorted { $0[0] > $1[0] }.forEach { print($0) }
