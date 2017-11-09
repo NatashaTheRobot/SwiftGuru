@@ -35,3 +35,31 @@ func q<T : Comparable>(_ w: [T]) -> [T] {
 
 q([10, 9, 8, 6, 4])
 q(["Tokyo", "New York", "Bangalore"])
+
+/*:
+Opertor precedence
+*/
+infix operator |+|: AdditionPrecedence
+func |+| (_ a: [Int], _ b: [Int]) -> [Int] {
+    precondition(a.count == b.count)
+    var c: [Int] = []
+    for idx in 0..<a.count {
+        c.append(a[idx] + b[idx])
+    }
+    return c
+}
+
+infix operator |*|: MultiplicationPrecedence
+func |*| (_ a: [Int], _ b: [Int]) -> [Int] {
+    precondition(a.count == b.count)
+    var c: [Int] = []
+    for idx in 0..<a.count {
+        c.append(a[idx] * b[idx])
+    }
+    return c
+}
+
+print([1, 2, 3] |+| [4, 5, 6])
+print([1, 2, 3] |*| [4, 5, 6])
+print([1, 2, 3] |+| [4, 5, 6] |*| [7, 8, 9])
+
