@@ -39,10 +39,7 @@
 <br>
 <br>
 
-## Session 7: Memory and Unsafe Swift
-### 7.1 Memory Layout
-### 7.2 Raw Pointers
-### 7.3 Typed Pointers
+## Session 7: Memory Management
 
 <br>
 <br>

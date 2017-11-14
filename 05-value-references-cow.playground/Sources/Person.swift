@@ -1,6 +1,6 @@
 import Foundation
 
-@objc public class Person: NSObject, NSCopying {
+@objc class Person: NSObject, NSCopying {
 
     public var name: String
     public var points: Int

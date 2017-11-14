@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
-    <pages>
-        <page name='6.1 memory-layout'/>
-        <page name='6.2 raw-pointer'/>
-        <page name='6.3 typed-pointer'/>
-    </pages>
-</playground>

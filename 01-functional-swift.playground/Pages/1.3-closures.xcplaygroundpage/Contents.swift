@@ -1,17 +1,19 @@
 /*:
  ## Session 1: Functional Swift
- ### 1.2 Closures
- Closures are anonymous functions.
- - Be able to write closures
+ ### 1.3 Closures
+ Closures are nothing but anonymous functions.
  */
 
+import Foundation
+
+//Function
 func backward(_ s1: String, _ s2: String) -> Bool {
     return s1 > s2
 }
 let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 var reversedNames = names.sorted(by: backward)
 
-//1. Closure Syntax
+//Closure Syntax
 let syntax = { (param1: String, param2: String) -> Bool in
     // statements
     return false
@@ -21,7 +23,7 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
     return s1 > s2
 })
 
-//2. Inferring Type From Context
+//Inferring Type From Context
 reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 })
 
 //3. Implicit Returns from Single-Expression Closures

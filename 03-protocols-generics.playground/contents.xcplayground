@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
-        <page name='Protocols'/>
-        <page name='generics-functions'/>
-        <page name='generic-types'/>
+        <page name='3.1-protocols'/>
+        <page name='3.2-generics'/>
+        <page name='3.2-generic-types'/>
         <page name='protocol-with-associatedtype'/>
         <page name='extending-generic-types'/>
         <page name='type-erasure'/>

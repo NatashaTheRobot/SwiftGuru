@@ -1,6 +1,6 @@
 /*:
  ## Session 1: Functional Swift
- ### 1.1 First-class functions
+ ### 1.2 First-class functions
  - Be able to assign a function to a property
  - Be able to pass a function as a parameter
  - Be able to return a function from a function
