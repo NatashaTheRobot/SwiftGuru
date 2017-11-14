@@ -1,92 +1,54 @@
-//: [Previous](@previous)
+/*:
+ ## Session 5: Value & References and Copy On Write
+ ### 5.1 Copy On Write
+ - Be able to understand how copy on write works
+ */
 
 import Foundation
 
-// Suppose you are given this Obective-C Monster to work with, and cannot
-// convert it to Swift.
-@objc public class RWMonster: NSObject, NSCopying {
-    
-    public init(name: String, hitPoints: Int) {
-        self.name = name
-        self.hitPoints = hitPoints
-    }
-    
-    override public var description: String {
-        return "\(name): \(hitPoints)"
-    }
-    
-    public func copy(with zone: NSZone? = nil) -> Any {
-        return RWMonster(name: name, hitPoints: hitPoints)
-    }
-    
-    public var name: String
-    public var hitPoints: Int
-}
+// Reference Types
+class COW { var string = "Hello, try! Swift" }
+var one = COW()
+var two = one
+address(of: one)
+address(of: two)
+two.string = "try! Swift"
+address(of: one)
+address(of: two)
 
-let owlBear = RWMonster(name: "Owl Bear", hitPoints: 30)
-var enemies: [RWMonster] = [owlBear]
-owlBear.hitPoints += 10
-print(enemies)  // Reference semantics :[
+// Value Types
+let a = [1,2,3]
+let b = a
+var c = b
+address(of: a)
+address(of: b)
+address(of: c)
+c.append(4)
+address(of: a)
+address(of: b)
+address(of: c)
+c.append(5)
+address(of: c)
 
-final class SwiftReference<T> {
-    var object: T
-    init(_ object: T) {
-        self.object = object
-    }
-}
+// The funciton isKnownUniquelyReferenced(_:) returns a Boolean value indicating whether the given object is known to have a single strong reference.
+class SomeClass {}
+var object = SomeClass()
+isKnownUniquelyReferenced(&object)
+var object2 = object
+isKnownUniquelyReferenced(&object)
 
-struct Monster: CustomStringConvertible {
-    
-    init(name: String, hitPoints: Int) {
-        _monster = SwiftReference(RWMonster(name: name, hitPoints: hitPoints))
-    }
-    
-    var name: String {
-        get {
-            return _monster.object.name
-        }
-        set {
-            _mutatingMonster.name = newValue
-        }
-    }
-    
-    var hitPoints: Int {
-        get {
-            return _monster.object.hitPoints
-        }
-        set {
-            _mutatingMonster.hitPoints = newValue
-        }
-    }
-    
-    var description: String {
-        return _monster.object.description
-    }
-    
-    fileprivate var _mutatingMonster: RWMonster {
-        
-        mutating get {
-            if !isKnownUniquelyReferenced(&_monster) {
-                print("making copy")
-                _monster = SwiftReference(_monster.object.copy() as! RWMonster)
-            }
-            else {
-                print("no copy")
-            }
-            return _monster.object
-        }
-    }
-    fileprivate var _monster: SwiftReference<RWMonster>
-}
+// Making Reference Types work like Value Types
+let rahul = Person(name: "Rahul", points: 5)
+var personArray = [rahul]
+rahul.points += 10
+personArray.description
 
-var troll = Monster(name: "Troll", hitPoints: 30)
-var monsters: [Monster] = [troll]
-troll.hitPoints += 100
-troll.hitPoints += 1000
-troll.hitPoints += 1000
-troll.hitPoints += 1000
-print(monsters)  // Value semantics :]
-print(troll)
-
-
-//: [Next](@next)
+// Making Reference Types work like Value Types
+var cow = PersonCOW(name: "Rahul", points: 5)
+var cowArray = [rahulCOW]
+cow.points += 10
+cow.points += 10
+cow.points += 10
+cow.points += 10
+cow
+cowArray.description

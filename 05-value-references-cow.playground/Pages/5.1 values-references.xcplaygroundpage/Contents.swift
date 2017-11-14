@@ -1,7 +1,7 @@
 /*:
  ## Session 5: Value & References and Copy On Write
  ### 5.1 Value & References
- - Be able to
+ - Be able to choose between value and reference types
  */
 
 // A struct implementation of Point
