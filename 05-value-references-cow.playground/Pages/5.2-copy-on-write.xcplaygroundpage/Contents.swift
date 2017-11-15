@@ -21,7 +21,7 @@ c.append(5)
 address(of: c)
 
 // Reference Types
-@objc class Person: NSObject {
+@objc class Person: NSObject, NSCopying {
     
     public var name: String
     public var points: Int
@@ -35,6 +35,9 @@ address(of: c)
         return "\(name): \(points)"
     }
     
+    func copy(with: NSZone? = nil) -> Any {
+        return Person(name: name, points: points)
+    }
 }
 
 let rahul = Person(name: "Rahul", points: 5)
@@ -43,7 +46,9 @@ rahul.points += 10
 rahul
 personArray.description
 
-//The funciton isKnownUniquelyReferenced(_:) returns a Boolean value indicating whether the given object is known to have a single strong reference.
+/*
+The funciton isKnownUniquelyReferenced(_:) returns a Boolean value indicating whether the given object is known to have a single strong reference.
+ */
 class SomeClass {}
 var object = SomeClass()
 isKnownUniquelyReferenced(&object)

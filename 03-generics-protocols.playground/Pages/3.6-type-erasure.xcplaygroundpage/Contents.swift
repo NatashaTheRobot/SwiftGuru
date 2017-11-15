@@ -6,6 +6,7 @@ protocol Stackable {
     mutating func pop() -> Element?
 }
 
+/////////////////////////////////////////////////////////////////////////
 private class _AnyStackableBase<T>: Stackable {
     typealias Element = T
     init() {
@@ -61,6 +62,7 @@ final class AnyStackable<T>: Stackable {
     }
 
 }
+/////////////////////////////////////////////////////////////////////////
 
 extension Array: Stackable {
     mutating func push(_ item: Element) {

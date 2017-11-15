@@ -1,5 +1,32 @@
 import Foundation
 
+@objc class Person: NSObject, NSCopying {
+    
+    public var name: String
+    public var points: Int
+    
+    public init(name: String, points: Int) {
+        self.name = name
+        self.points = points
+    }
+    
+    override public var description: String {
+        return "\(name): \(points)"
+    }
+    
+    func copy(with: NSZone? = nil) -> Any {
+        return Person(name: name, points: points)
+    }
+     
+}
+
+public final class SwiftReference<T> {
+    var object: T
+    init(_ object: T) {
+        self.object = object
+    }
+}
+
 public struct PersonCOW: CustomStringConvertible {
     
     public init(name: String, points: Int) {
