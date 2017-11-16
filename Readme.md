@@ -24,7 +24,7 @@ Swift is designed to be a highly expressive language. Support for custom operato
 <br>
 
 ## Session 3: Protocols And Generics
-
+Protocols is one of the cornerstones of Swift. Generics, in themselves, like those of any other language, are a crucial construct when it comes to writing the standard library. The primary application of generics is with protocols. In this session we'd also touch upon protocol oriented programming, associated types and type erasure.
 <br>
 <br>
 
@@ -34,7 +34,7 @@ Collections form the backbone of any langauge's standard library. Sequences and 
 <br>
 
 ## Session 5: Value, References, Indirection And Copy On Write
-
+What's better - `class` or `struct`? Though many are heard advocating "programming with values", a programmer needs to appreciate the meaning of `values` and `references` to make some decision decisions. 
 <br>
 <br>
 
