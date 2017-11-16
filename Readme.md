@@ -49,7 +49,7 @@ In simple words, enums are types with a limited set of values. The values in tur
 <br>
 
 ## Backup Topics
-We'll deal with them only if there's time left after dealing with all of the above. 
+We'll deal with these only if there's time left covering all of the above. 
 ### Codable and JSON
 Introduced in Swift 4, the Codable interface along with the JSON encoding and decoding support, makes encoding to JSON and decoding out of JSON very easy.
 ### KeyPaths
