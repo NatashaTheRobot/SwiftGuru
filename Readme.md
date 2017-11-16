@@ -5,17 +5,21 @@
 <br>
 
 ## Session 1: Functional Swift
-### 1.1 First-class functions
-### 1.2 Closures
-### 1.3 Immutability and Pure Functions
+### 1.1 Immutability and Pure Functions
+Fundamentals of Functional Programming. Learn about the merits of immutability, pure and impure functions.
+### 1.2 Functions as "first class citizens"
+In Swift, functions can be stored, passed as arguments, returned from other functions - they `first class` citizens!
+### 1.3 Closures
+Closures are anonymous functions. Their contribution to the "high expressiveness" is tremendous. They make code concise and readable at the same time!
 ### 1.4 Higher-order Functions
+Functions that accept or return other functions are called `higher order functions`. The legendary `map`, `filter`, `reduce` and `flatMap`.
 ### 1.5 Recursion
 
 <br>
 <br>
 
 ## Session 2: Custom Operators
-
+Swift is designed to be a highly expressive language. Support for custom operators on custom types works wonders in this direction. Swift actually allows you to define your own domain specific language by letting you define different kinds of operators and set the precedences. 
 <br>
 <br>
 
@@ -24,8 +28,8 @@
 <br>
 <br>
 
-## Session 4: Collection And Sequences
-
+## Session 4: Sequences and Collections
+Collections form the backbone of any langauge's standard library. Sequences and different kinds Collections in Swift are defined as protocols. The conformance rules to every protocol are very clearly stated. Conforming to any of the Collection protocol gives in return, a lot of functionality, making the API usage a great experience. Get hands-on to see how conformance to different protocols enriches your experience. 
 <br>
 <br>
 
@@ -34,8 +38,8 @@
 <br>
 <br>
 
-## Session 6: Enums & Error Handling
-
+## Session 6: Enums, Pattern Matching and Error Handling
+In simple words, enums are types with a limited set of values. The values in turn, may have associated values. Pattern matching is typically done using the `switch` statement. The powers of `enums` and `pattern matching` can be realized only by using to together. One of the use cases of enums and pattern matching is `error handling`. 
 <br>
 <br>
 
@@ -45,5 +49,8 @@
 <br>
 
 ## Backup Topics
+We'll deal with them only if there's time left after dealing with all of the above. 
 ### Codable and JSON
+Introduced in Swift 4, the Codable interface along with the JSON encoding and decoding support, makes encoding to JSON and decoding out of JSON very easy.
 ### KeyPaths
+Discussed scantily for now, KeyPaths are quite a powerful construct introduced in Swift 4. They let you create a property reference into a deeply nested structure, allowing you to access and modify properties by using them as an index. 
