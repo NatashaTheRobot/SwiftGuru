@@ -44,7 +44,7 @@ In simple words, enums are types with a limited set of values. The values in tur
 <br>
 
 ## Session 7: Memory Management
-
+Learn basics of the ARC (`Automatic Reference Counting`) model of memory managements. We'd also touch upon the Unsafe API which allows you to create loosely defined (weak!) types.
 <br>
 <br>
 
