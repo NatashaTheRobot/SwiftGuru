@@ -73,22 +73,22 @@ llStack.pop()
 
 //5.4 Extend Stackable to provide additional functionality
 //5.4.1 Find the Top Element
-//extension Stackable where Self: Collection, Item == Self.Element {
-//    func peak() -> Item? {
-//        return isEmpty ? nil : self[self.count-1]
-//    }
-//}
-//arrayStack.peak()
+extension Stackable where Self: Collection, Item == Self.Element {
+    func peek() -> Item? {
+        return isEmpty ? nil : self[startIndex]
+    }
+}
+arrayStack.peek()
 
 
 //5.4.2 Check if isPeak at a given number
-//extension Stackable where Self: Collection, Item == Self.Element, Item: Equatable {
-//    func isPeak(at number: Item) -> Bool {
-//        return peak() == number
-//    }
-//}
-//arrayStack.isPeak(at: "3")
-//arrayStack.isPeak(at: "1")
+extension Stackable where Self: Collection, Item == Self.Element, Item: Equatable {
+    func isPeek(at number: Item) -> Bool {
+        return peek() == number
+    }
+}
+arrayStack.isPeek(at: "3")
+arrayStack.isPeek(at: "1")
 
 //5.4.2 Find the largest item
 extension Stackable where Self: Collection, Item == Self.Element, Item: Comparable {

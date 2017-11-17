@@ -6,13 +6,13 @@
 
 ## Session 1: Functional Swift
 ### 1.1 Immutability and Pure Functions
-Fundamentals of Functional Programming. Learn about the merits of immutability, pure and impure functions.
-### 1.2 Functions as "first class citizens"
-In Swift, functions can be stored, passed as arguments, returned from other functions - they `first class` citizens!
-### 1.3 Closures
+Fundamentals of Functional Programming. Learn about the merits of immutability, pure and impure functions. In Swift, functions can be stored, passed as arguments, returned from other functions - they `first class` citizens!
+### 1.2 Closures
 Closures are anonymous functions. Their contribution to the "high expressiveness" is tremendous. They make code concise and readable at the same time!
+### 1.3 Higher-order Functions
+Functions that accept or return other functions are called `higher order functions`. The legendary `map`, `filter`, `reduce` and `flatMap`.
 ### 1.4 Higher-order Functions
-Functions that accept or return other functions are called `higher order functions`. The legendary `map`, `filter`, `reduce` and `flatMap`. Function composition make code readable and modular. 
+Function composition make code readable and modular.
 
 <br>
 <br>
@@ -33,7 +33,7 @@ Collections form the backbone of any langauge's standard library. Sequences and 
 <br>
 
 ## Session 5: Value, References, Indirection And Copy On Write
-What's better - `class` or `struct`? Though many are heard advocating "programming with values", a programmer needs to appreciate the meaning of `values` and `references` to make some decision decisions. 
+What's better - `class` or `struct`? Though many are heard advocating "programming with values", a programmer needs to appreciate the meaning of `values` and `references` to make some decision and how to make reference types have value semantics.
 <br>
 <br>
 
@@ -43,7 +43,7 @@ In simple words, enums are types with a limited set of values. The values in tur
 <br>
 
 ## Session 7: Memory Management
-Learn basics of the ARC (`Automatic Reference Counting`) model of memory managements. We'd also touch upon the Unsafe API which allows you to create loosely defined (weak!) types.
+Learn how to access memory directly from the unsafe swift API
 <br>
 <br>
 
