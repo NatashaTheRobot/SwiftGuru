@@ -5,11 +5,6 @@
 <br>
 
 ## Session 1: Functional Swift
-### 1.1 First-class functions
-### 1.2 Closures
-### 1.3 Immutability and Pure Functions
-### 1.4 Higher-order Functions
-### 1.5 Recursion
 
 <br>
 <br>

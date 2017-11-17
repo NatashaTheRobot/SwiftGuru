@@ -1,7 +1,10 @@
 /*:
  ## Session 3: Generics and Protocols
  ### 3.2 Generics
- Generic code enables you to write flexible, reusable functions and types that can work with any type
+ */
+
+/* Speaker Notes
+ Generics enables you to write flexible, reusable functions and types that can work with any type.
  */
 
 //1. Generic Functions

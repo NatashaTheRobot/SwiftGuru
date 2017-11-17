@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'/>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='0-speaker-notes'/>
+        <page name='5.1-memory-layout'/>
+        <page name='5.2-raw-pointers'/>
+        <page name='5.3-typed-pointers'/>
+    </pages>
+</playground>

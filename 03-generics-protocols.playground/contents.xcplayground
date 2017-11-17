@@ -3,8 +3,7 @@
     <pages>
         <page name='3.1-generics'/>
         <page name='3.2-protocols'/>
-        <page name='3.3-pop'/>
-        <page name='3.4-associated-type'/>
-        <page name='3.6-type-erasure'/>
+        <page name='3.3-associated-type'/>
+        <page name='3.4-type-erasure'/>
     </pages>
 </playground>

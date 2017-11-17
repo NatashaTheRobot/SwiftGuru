@@ -1,12 +1,21 @@
 /*:
  ## Session 1: Functional Swift
  ### 1.1 Introduction
+ */
+
+/* Speaker Notes
  Functional Programming is a programming paradigm that treats computation as evaluation of mathematical functions and avoid states and mutable data. ~Wikipedia
  
  Advantages
  - No Concurrency issues
  - Easy Testing and Debugging
  - Reusability
+ - Reasoning
+ 
+ Principles
+ - Immutability
+ - Pure Functions
+ - First Class Citizens
  */
 
 //1. Immutability and Side Effects
@@ -31,3 +40,23 @@ func incrementByTen(_ immutableNumber: Int) -> Int {
 incrementByTen(immutableNumber)
 incrementByTen(immutableNumber)
 incrementByTen(immutableNumber)
+
+//3. First Class Functions
+//3.1. Using Functions as a property
+func sayHello() { print("Hello!") }
+let greeting = sayHello
+greeting()
+
+//3.2. Passing a function as a parameter
+func executeFunction(_ function: () -> Void) {
+    function()
+}
+func sayHi() { print("Hi!") }
+executeFunction(sayHi)
+
+//3.3. Returning a function
+func returnFunction() -> (() -> Void) {
+    func sayHey() { print("Hey!") }
+    return sayHey
+}
+returnFunction()()

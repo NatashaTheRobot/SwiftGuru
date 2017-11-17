@@ -1,7 +1,10 @@
 /*:
  ## Session 1: Functional Swift
- ### 1.3 Closures
- Closures are nothing but anonymous functions.
+ ### 1.2 Closures
+ */
+
+/* Speaker Notes
+ Closures are nothing but anonymous function. Here we will see how to write closures and pass them as arguments.
  */
 
 import Foundation
@@ -13,7 +16,7 @@ func backward(_ s1: String, _ s2: String) -> Bool {
 let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 var reversedNames = names.sorted(by: backward)
 
-//1. Closure Syntax
+// Closure Syntax
 let syntax = { (param1: String, param2: String) -> Bool in
     // statements
     return false

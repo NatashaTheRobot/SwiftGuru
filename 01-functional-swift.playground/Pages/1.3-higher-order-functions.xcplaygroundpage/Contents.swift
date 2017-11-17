@@ -1,8 +1,16 @@
 /*:
  ## Session 1: Functional Swift
  ### 1.4 Higher-order Functions
+ */
+
+/* Speaker Notes
  Higher order functions are simply functions that operate on other functions by either taking a function as an argument, or returning a function.
- - Be able to use map, filter, reduce and flatMap
+ 
+ Swift provides us a lot of functions in standard library and we are going to discuss some of them like
+ - Map
+ - flatMap
+ - Filter
+ - Reduce
  */
 
 //1. Transform [1,2,3,4,5] into Squares
