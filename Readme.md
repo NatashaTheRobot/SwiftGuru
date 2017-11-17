@@ -13,8 +13,6 @@ In Swift, functions can be stored, passed as arguments, returned from other func
 Closures are anonymous functions. Their contribution to the "high expressiveness" is tremendous. They make code concise and readable at the same time!
 ### 1.4 Higher-order Functions
 Functions that accept or return other functions are called `higher order functions`. The legendary `map`, `filter`, `reduce` and `flatMap`. Function composition make code readable and modular. 
-### 1.5 Recursion
-
 <br>
 <br>
 
