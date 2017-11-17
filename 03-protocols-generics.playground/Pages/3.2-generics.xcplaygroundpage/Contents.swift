@@ -61,20 +61,4 @@ intStack
 //2.2 Generic Type
 struct GenericTypeName<T> {}
 
-//2.3 Covert IntStack to a generic version of stack
-struct Stack<Element> {
-    var items = [Element]()
-    mutating func push(_ item: Element) {
-        items.append(item)
-    }
-    mutating func pop() -> Element {
-        return items.removeLast()
-    }
-}
-
-var stringStack = Stack<String>()
-stringStack.push("foo")
-stringStack.push("bar")
-stringStack.push("baz")
-stringStack.pop()
-stringStack
+//2.3 Covert IntStack to a generic version of stack and extend it to provide additional functionality like finding a peek and to check if a peak is at a specific value.
