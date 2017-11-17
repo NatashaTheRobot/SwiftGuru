@@ -32,7 +32,7 @@ Collections form the backbone of any langauge's standard library. Sequences and 
 <br>
 
 ## Session 5: Value, References, Indirection And Copy On Write
-What's better - `class` or `struct`? Though many are heard advocating "programming with values", a programmer needs to appreciate the meaning of `values` and `references` to make some decision decisions. 
+What's better - `class` or `struct`? Though many are heard advocating "programming with values", a programmer needs to appreciate the meaning of `values` and `references` to make some design decisions. 
 <br>
 <br>
 
@@ -51,4 +51,4 @@ We'll deal with these only if there's time left covering all of the above.
 ### Codable and JSON
 Introduced in Swift 4, the Codable interface along with the JSON encoding and decoding support, makes encoding to JSON and decoding out of JSON very easy.
 ### KeyPaths
-Discussed scantily for now, KeyPaths are quite a powerful construct introduced in Swift 4. They let you create a property reference into a deeply nested structure, allowing you to access and modify properties by using them as an index. 
+Discussed scantily for now, KeyPaths are quite a powerful construct introduced in Swift 4. They let you create a property reference into a deeply nested structure, allowing you to access and modify properties by the reference as an index. 
