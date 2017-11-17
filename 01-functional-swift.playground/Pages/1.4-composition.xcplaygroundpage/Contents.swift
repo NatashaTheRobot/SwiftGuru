@@ -20,9 +20,9 @@ let cities = [delhi,gurgaon,chandigarh,noida]
 let totalPopulation = cities.reduce(0) { $0 + $1.population }
 totalPopulation
 
-//2. Chain operations to sort cities according to population and print string "Noida > Chandigarh > Delhi > Gurgaon"
+//2. Chain operations to sort cities according to population and print string "Noida Chandigarh  Delhi Gurgaon"
 let sorted = cities
     .sorted(by: { $0.population > $1.population })
     .map { $0.name }
-    .joined(separator: " > ")
+    .reduce("") { "\($0) \($1)" }
 sorted
