@@ -3,10 +3,6 @@
  ### 3.2 Generics
  */
 
-/* Speaker Notes
- Generics enables you to write flexible, reusable functions and types that can work with any type.
- */
-
 //1. Generic Functions
 //1.1 Non-Generic function
 func inspect(_ item: Int) {
@@ -21,19 +17,6 @@ func inspect<T>(_ item: T) { // Why not just Any
 inspect("String")
 
 //1.3 Generic Constraints
-protocol Numeric {
-    static func *(lhs: Self, rhs: Self) -> Self
-}
-
-extension Int: Numeric {}
-extension Float: Numeric {}
-
-func square<T: Numeric>(_ value: T) -> T {
-    return value * value
-}
-let i: Int = 9
-square(i)
-
 func square<T: Sequence>(_ value: T) -> [T.Element] where T.Element: Numeric {
     return value.map { $0 * $0 }
 }
@@ -62,3 +45,15 @@ intStack
 struct GenericTypeName<T> {}
 
 //2.3 Covert IntStack to a generic version of stack and extend it to provide additional functionality like finding a peek and to check if a peak is at a specific value.
+
+//var stringStack = Stack<String>()
+//stringStack.push("foo")
+//stringStack.push("bar")
+//stringStack.push("baz")
+//stringStack.pop()
+//stringStack
+//
+//stringStack.peek()
+//stringStack.isPeek(at: "baz")
+//stringStack.isPeek(at: "bar")
+
