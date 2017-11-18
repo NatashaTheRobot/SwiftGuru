@@ -15,10 +15,10 @@ struct Stack<Element>: Stackable {
     typealias Item = Element
     var items = [Element]()
     mutating func push(_ item: Element) {
-        items.append(item)
+        items.insert(item, at: 0)
     }
     mutating func pop() -> Element? {
-        return items.removeLast()
+        return items.removeFirst()
     }
 }
 
@@ -71,23 +71,27 @@ llStack.push("1")
 llStack.push("0")
 llStack.pop()
 
+llStack.count
+
 //5.4 Extend Stackable to provide additional functionality
 //5.4.1 Find the Top Element
 extension Stackable where Self: Collection, Self.Element == Item {
     func peek() -> Item? {
-        return isEmpty ? nil : self[index(startIndex, offsetBy: self.count-1)]
+        return isEmpty ? nil : self[startIndex]
     }
 }
 arrayStack.peek()
+llStack.peek()
 
 //5.4.2 Check if isPeak at a given number
-extension Stackable where Self: Collection, Self.Element == Item, Item: Equatable {
+extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Equatable {
     func isPeek(at number: Element) -> Bool {
         return peek() == number
     }
 }
 arrayStack.isPeek(at: "3")
 arrayStack.isPeek(at: "1")
+llStack.isPeek(at: "1")
 
 //5.4.2 Find the largest item
 extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Comparable {
@@ -97,4 +101,4 @@ extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Com
     }
 }
 arrayStack.largest()
-
+llStack.largest()

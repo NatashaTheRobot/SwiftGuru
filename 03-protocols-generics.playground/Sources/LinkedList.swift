@@ -60,3 +60,42 @@ extension LinkedList: Sequence {
     }
     
 }
+
+extension LinkedList : Collection {
+    
+    public typealias Index = Int
+    
+    public var startIndex: Index { return 0 }
+    
+    public var endIndex: Index {
+        get {
+            if let head = head {
+                var numberOfElements = 1
+                var current = head
+                while current.next != nil {
+                    numberOfElements += 1
+                    current = current.next!
+                }
+                return numberOfElements
+            } else {
+                return startIndex
+            }
+        }
+    }
+    
+    public subscript(position: Index) -> Element {
+        get {
+            var currentPosition = startIndex
+            var element = head!
+            while currentPosition != position {
+                element = element.next!
+                currentPosition = index(after: currentPosition)
+            }
+            return element.value
+        }
+    }
+    
+    public func index(after idx: Index) -> Index {
+        return idx+1
+    }
+}
