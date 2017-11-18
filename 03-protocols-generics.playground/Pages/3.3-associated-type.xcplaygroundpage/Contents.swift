@@ -3,7 +3,7 @@
  ### 3.3 Protocols with Associated Type
  */
 
-//5.1 Create a stackable protocol that has array of items as a property requirement and has mutating method requirements to push and pop an integer
+//5.1 Create a stackable protocol that has array of items as a property requirement and has mutating method requirements to push and pop an element
 protocol Stackable {
     associatedtype Item
     mutating func push(_ item: Item)
@@ -41,11 +41,11 @@ extension Array: Stackable {
     }
 }
 
-var arrayStack = Array<String>()
-arrayStack.push("3")
-arrayStack.push("2")
-arrayStack.push("1")
-arrayStack.push("0")
+var arrayStack = Array<Int>()
+arrayStack.push(3)
+arrayStack.push(2)
+arrayStack.push(1)
+arrayStack.push(0)
 arrayStack.pop()
 
 //5.3.2 LinkedList
@@ -65,10 +65,10 @@ extension LinkedList: Stackable {
 }
 
 var llStack = LinkedList<String>()
-llStack.push("3")
-llStack.push("2")
-llStack.push("1")
-llStack.push("0")
+llStack.push("foooo")
+llStack.push("bazz")
+llStack.push("bar")
+llStack.push("buzzzz")
 llStack.pop()
 
 llStack.count
@@ -80,8 +80,8 @@ extension Stackable where Self: Collection, Self.Element == Item {
         return isEmpty ? nil : self[startIndex]
     }
 }
-arrayStack.peek()
-llStack.peek()
+arrayStack.peek() //3
+llStack.peek() //bar
 
 //5.4.2 Check if isPeak at a given number
 extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Equatable {
@@ -89,9 +89,9 @@ extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Equ
         return peek() == number
     }
 }
-arrayStack.isPeek(at: "3")
-arrayStack.isPeek(at: "1")
-llStack.isPeek(at: "1")
+arrayStack.isPeek(at: 3) //true
+arrayStack.isPeek(at: 1) //false
+llStack.isPeek(at: "bar") //true
 
 //5.4.2 Find the largest item
 extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Comparable {
@@ -100,5 +100,5 @@ extension Stackable where Self: Collection, Self.Item == Self.Element, Item: Com
         return reduce(first) { $0 > $1 ? $0 : $1 }
     }
 }
-arrayStack.largest()
-llStack.largest()
+arrayStack.largest() //3
+llStack.largest() //foooo
