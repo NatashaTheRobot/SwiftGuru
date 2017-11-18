@@ -13,7 +13,6 @@ Closures are anonymous functions. Their contribution to the "high expressiveness
 Functions that accept or return other functions are called `higher order functions`. The legendary `map`, `filter`, `reduce` and `flatMap`.
 ### 1.4 Higher-order Functions
 Function composition make code readable and modular.
-
 <br>
 <br>
 
@@ -48,8 +47,8 @@ Learn how to access memory directly from the unsafe swift API
 <br>
 
 ## Backup Topics
-We'll deal with these only if there's time left covering all of the above. 
+We'll deal with these only if there's time left after covering all of the above. 
 ### Codable and JSON
 Introduced in Swift 4, the Codable interface along with the JSON encoding and decoding support, makes encoding to JSON and decoding out of JSON very easy.
 ### KeyPaths
-Discussed scantily for now, KeyPaths are quite a powerful construct introduced in Swift 4. They let you create a property reference into a deeply nested structure, allowing you to access and modify properties by using them as an index. 
+Discussed scantily for now, KeyPaths are quite a powerful construct introduced in Swift 4. They let you create a property reference into a deeply nested structure, allowing you to access and modify properties by the reference as an index. 
