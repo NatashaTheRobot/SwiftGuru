@@ -6,7 +6,7 @@
 class DrawableClass {
     
     func draw() {
-        fatalError("mplement me")
+        fatalError("implement me")
     }
     
 }
