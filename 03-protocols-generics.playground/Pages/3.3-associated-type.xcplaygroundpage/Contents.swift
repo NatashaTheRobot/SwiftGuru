@@ -1,5 +1,5 @@
 /*:
- ## Session 3: Generics and Protocols
+ ## Session 3: Protocols and Generics
  ### 3.3 Protocols with Associated Type
  */
 

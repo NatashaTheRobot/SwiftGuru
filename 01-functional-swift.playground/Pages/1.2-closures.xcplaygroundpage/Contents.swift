@@ -3,10 +3,6 @@
  ### 1.2 Closures
  */
 
-/* Speaker Notes
- Closures are nothing but anonymous function. Here we will see how to write closures and pass them as arguments.
- */
-
 import Foundation
 
 //Function
