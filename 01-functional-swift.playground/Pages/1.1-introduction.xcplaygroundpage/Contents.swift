@@ -3,6 +3,21 @@
  ### 1.1 Introduction
  */
 
+/* Speaker Notes
+ Functional Programming is a programming paradigm that treats computation as evaluation of mathematical functions and avoid states and mutable data. ~Wikipedia
+ 
+ Key Concepts
+ - Immutability
+ - Pure Functions
+ - First Class Citizens
+ 
+ Advantages
+ - No Concurrency issues
+ - Easy Testing and Debugging
+ - Reusability
+ - Reasoning
+ */
+
 //1. Immutability and Side Effects
 var mutableNumber = 1;
 mutableNumber = 5;

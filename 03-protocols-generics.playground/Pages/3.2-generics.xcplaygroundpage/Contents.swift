@@ -3,6 +3,10 @@
  ### 3.2 Generics
  */
 
+/* Speaker Notes
+ Generics enables you to write flexible, reusable functions and types that can work with any type.
+ */
+
 //1. Generic Functions
 //1.1 Non-Generic function
 func inspect(_ item: Int) {
@@ -45,15 +49,35 @@ intStack
 struct GenericTypeName<T> {}
 
 //2.3 Covert IntStack to a generic version of stack and extend it to provide additional functionality like finding a peek and to check if a peak is at a specific value.
+struct Stack<Element> {
+    var items = [Element]()
+    mutating func push(_ item: Element) {
+        items.append(item)
+    }
+    mutating func pop() -> Element {
+        return items.removeLast()
+    }
+}
 
-//var stringStack = Stack<String>()
-//stringStack.push("foo")
-//stringStack.push("bar")
-//stringStack.push("baz")
-//stringStack.pop()
-//stringStack
-//
-//stringStack.peek()
-//stringStack.isPeek(at: "baz")
-//stringStack.isPeek(at: "bar")
+extension Stack {
+    func peek() -> Element? {
+        return items.isEmpty ? nil : items[items.count-1]
+    }
+}
 
+extension Stack where Element: Equatable {
+    func isPeek(at element: Element) -> Bool {
+        return peek() == element
+    }
+}
+
+var stringStack = Stack<String>()
+stringStack.push("foo")
+stringStack.push("bar")
+stringStack.push("baz")
+stringStack.pop()
+stringStack
+
+stringStack.peek()
+stringStack.isPeek(at: "baz")
+stringStack.isPeek(at: "bar")

@@ -6,7 +6,7 @@
 class DrawableClass {
     
     func draw() {
-        fatalError("implement me")
+        fatalError("mplement me")
     }
     
 }
@@ -51,3 +51,4 @@ extension Drawable {
 }
 
 shape.render()
+

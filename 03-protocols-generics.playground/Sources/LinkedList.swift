@@ -99,3 +99,4 @@ extension LinkedList : Collection {
         return idx+1
     }
 }
+
